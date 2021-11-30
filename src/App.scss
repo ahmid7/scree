@@ -7,7 +7,7 @@
 
 $primary-text-color:#000;;
 $secondary-text-color:#fff;
-$section-padding:3rem 0;
+$section-padding:5rem;
 
 @mixin flex($justify:space-between){
     display: flex;
@@ -17,6 +17,11 @@ $section-padding:3rem 0;
 .hero-header,.section-width{
     max-width: 85%;
     margin:0 auto;
+}
+
+@mixin hover-button{
+    background-color: #151c4b;
+    transition: 1000ms;
 }
 
 .hero-bg{
@@ -75,6 +80,8 @@ $section-padding:3rem 0;
             p{
                 background: red;
                 border-radius: 50%;
+                width:20px;
+                height: 20px;
                 @include flex(center);
                 font-size: 0.9rem;
                 margin-left: 0.5rem;
@@ -155,7 +162,7 @@ $section-padding:3rem 0;
 
 // beautify-section component for both beautify and delivery section
 .beautify-section{
-    padding:1.5rem 0;
+    padding:$section-padding 0;
     background: #7736040F;
     .container{
         @include flex;
@@ -226,7 +233,7 @@ $section-padding:3rem 0;
 
 //store-section
 .store-section{
-    padding: 2rem 0;
+    padding: $section-padding 0;
     .store-header{
         @include flex;
         padding-bottom: 2rem;
@@ -425,6 +432,35 @@ footer{
         }
     }
     
+    .community-section{
+        padding:3rem 0;
+        form{
+    
+            label{
+                border:2px solid lightgray;
+                width: 75%;
+                border-radius:10px;
+            }
+            input{
+                padding: 1rem 1rem;
+                display: inline-block;
+                border:none;
+                font-size: 0.7rem;
+                width: 100%;
+                outline: none;
+            }
+            button{
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                font-size: 0.6rem;  
+                background: #0E122F;
+                color: $secondary-text-color;
+                text-transform:uppercase;
+                border:none;
+            }
+        }
+    }
+    
 
     // footer section
     footer{
@@ -440,7 +476,160 @@ footer{
             letter-spacing: 1px;
         }
     }
-} 
+}
+
+@media only screen and (max-width:1024px){
+    
+    .hero-header{
+        .hero-icon{
+            font-size: 0.7rem;
+            img{
+                width: 4rem;
+            }
+        }
+    
+        ul{
+            li {
+                a{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    
+        .search-cart{
+             .search{
+                .search-icon{
+                    font-size: 0.7rem;
+                }
+            }
+    
+            .cart{
+                padding:0.5rem 0.9rem;
+                .cart-icon{
+                    font-size: 0.8rem;
+                }
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    
+    .hero-content{
+        padding-bottom: 30rem;
+        h2{
+            font-size: 1.4rem;
+            font-weight: 800;
+            padding: 1.5rem 0 1rem 0;
+            color: $secondary-text-color;
+            line-height: 1.5;
+        }
+        button{
+            background: #0E122F;
+            border-radius: 20px;
+            border:none;
+            a{
+                font-size: 0.6rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding:0.8rem 2rem;
+                display: inline-block;
+                color: $secondary-text-color;
+                outline: none;
+            }
+        }
+    }
+    
+    // arrival section
+    .arrival-section{
+        h2{
+            font-size: 1rem;
+        }
+        .arrival-container{
+            .arrival-product{
+                p{
+                    font-size: 0.8rem;
+                }
+                .buy{
+                    p{
+                        font-size: 0.8rem;
+                    }
+    
+                    a{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .beautify-section{
+        .container{
+            .image-text{
+                flex-basis: 45%;
+    
+                h2{
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: 0.7rem;
+                }
+                button{
+                    a{
+                        font-size: 0.6rem;
+                        padding:0.7rem 0.9rem;
+                    }
+                }
+            }
+        }
+    
+    }
+
+    //store-section
+    .store-section{
+        .store-header{
+            h2{
+                font-size: 1.2rem;
+            }
+    
+            a{
+                font-size: 0.9rem;
+            }
+        }
+    }
+    
+    .community-section{
+        h2{
+            
+        }
+        form{
+            width: 58%;
+            label{
+                border:2px solid lightgray;
+                width: 69%;
+            }
+            input{
+                padding: 1rem;
+                font-size: 0.7rem;
+            }
+        }
+    }
+    
+
+    // footer section
+    footer{
+        background: #0B0D17;
+        color: white;
+        .last-page{
+            @include flex;
+            font-size: 0.7rem;
+        }
+        .logo{
+            @include flex(center);
+            font-size: 0.6rem;
+            letter-spacing: 1px;
+        }
+    }
+}
 
 @media only screen and (max-width:768px){
     .hero-header{
@@ -574,10 +763,13 @@ footer{
     }
     footer{
         .last-page{
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
         .logo{
-            font-size: 0.8rem;
+            img{
+                width: 4rem;
+            }
+            font-size: 0.5rem;
         }
     }
 }
@@ -590,9 +782,7 @@ footer{
                 width: 3.5rem;
             }
         }
-    
         ul{
-            display: none;
             li {
                 a{
                     font-size: 0.7rem;
@@ -641,7 +831,7 @@ footer{
             font-size: 0.9rem;
         }
         .arrival-container{
-            display: flex;
+            flex-flow: column nowrap;
             .arrival-product{
                 @include flex;
                 .arrival-image{
@@ -649,6 +839,12 @@ footer{
                     img{
                         width: 100%;
                     }
+                }
+                p{
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    padding: 0;
+                    font-weight: 700;
                 }
             }
         }
@@ -727,8 +923,4 @@ footer{
         }
     }
 
-}
-
-@media only screen and (min-width:320px){
-    
 }
