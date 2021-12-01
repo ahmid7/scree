@@ -5,7 +5,7 @@ const Footer =() =>{
     return (
         <footer>
             <div className="section-width last-page">
-                <div>
+                <div className="copy-right">
                     © 2021 Furnie. All rights reserved
                 </div>
                 <div className="logo">
@@ -14,16 +14,16 @@ const Footer =() =>{
                 </div>
                 <div className="media-icons-container">
                     <div className="media-icon">
-                        <RiInstagramLine/>
+                        <RiInstagramLine className="m-icon"/>
                     </div>
                     <div className="media-icon">
-                        <RiFacebookLine/>
+                        <RiFacebookLine className="m-icon"/>
                     </div>
                     <div className="media-icon">
-                        <RiTwitterLine/>
+                        <RiTwitterLine className="m-icon"/>
                     </div>
                     <div className="media-icon">
-                        <RiYoutubeLine/>
+                        <RiYoutubeLine className="m-icon"/>
                     </div>
                 </div>
             </div>

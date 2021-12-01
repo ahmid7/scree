@@ -17,6 +17,7 @@ const Beautify = () =>{
     return(
         <section className="beautify-section">
             <div className="section-width container">
+                <h2 className="Beautify-header-mobile">{imagetext.header}</h2>
                 <ImageGallery {...images}/>
                 <Imagetext {...imagetext}/>
             </div>

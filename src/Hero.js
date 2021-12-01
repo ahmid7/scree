@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
             <section className="hero-content">
                 <div class="section-width">
-                    <h2>Beautiful Furnitures That Complement <br/> Your Home And Workspace</h2>
+                    <h2>Beautiful Furnitures That Complement <br className="hide-mobile"/> Your Home And Workspace</h2>
                     <button><a href="#home">shop now</a></button>
                 </div>
             </section>

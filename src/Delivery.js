@@ -17,6 +17,7 @@ const Delivery = () =>{
     return (
         <section className="beautify-section">
             <div className="section-width container">
+                <h2 className="Beautify-header-mobile">{imagetext.header}</h2>
                 <Imagetext {...imagetext}/>
                 <ImageGallery {...images}/>
             </div>
