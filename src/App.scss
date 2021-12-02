@@ -15,8 +15,8 @@ $section-padding:5rem;
     align-items: center;
 }
 .hero-header,.section-width{
-    width: 85%;
-    margin:0 auto;
+    width: 50%;
+    margin:0 auto; //85
 }
 
 @mixin hover-button{
@@ -351,6 +351,13 @@ footer{
     }
 }
 
+@media only screen and (max-width:1440px){
+    .hero-header,.section-width{
+        width: 85%;
+        margin:0 auto;
+    }
+    
+}
 
 @media only screen and (max-width:1280px){
     .hero-header,.section-width{
@@ -803,6 +810,7 @@ footer{
     }
     .hero-header{
         width: 100%;
+        padding:1rem 0;
         position: fixed;
         top:0;
         background-color: inherit;
