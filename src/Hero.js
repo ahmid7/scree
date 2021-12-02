@@ -33,8 +33,8 @@ const Hero = () => {
                         <RiShoppingCartLine className="cart-icon"/>
                         <p>0</p>
                     </div>
-                    <div class="hamburger-container" >
-                        <Hamburger toggled={isOpen} toggle={setOpen} distance ="sm" size={18} hideOutline={false}/>
+                    <div className="hamburger-container">
+                        <Hamburger toggled={isOpen} toggle={setOpen} className="hamburger" distance ="sm" size={18} hideOutline={false}/>
                     </div>
                 </div>
             </div>
