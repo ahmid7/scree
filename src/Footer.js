@@ -3,7 +3,7 @@ import { RiInstagramLine,RiFacebookLine,RiTwitterLine,RiYoutubeLine } from "reac
 
 const Footer =() =>{
     return (
-        <footer>
+        <footer id="contact">
             <div className="section-width last-page">
                 <div className="copy-right">
                     © 2021 Furnie. All rights reserved

@@ -4,9 +4,18 @@ import Hamburger from "hamburger-react";
 
 const Hero = () => {
     const [isOpen, setOpen] = useState(false);
+    const [colorChange,setcolorChange] = useState(false);
+    const changeNavBarColor = () =>{
+        if(window.scrollY >=10){
+            setcolorChange(true);
+        }else{
+            setcolorChange(false)
+        }
+    }
+    window.addEventListener('scroll', changeNavBarColor);
     return(
-        <div className="hero-bg">
-            <div className="hero-header">
+        <div className="hero-bg" id="home">
+            <div className={colorChange ? 'hero-header nav-color' : 'hero-header'}>
                 <div className="hero-icon">
                     <img src="images/logo.png" alt="logo"/>
                     <h2 className="logo-text">Furnie</h2>
@@ -25,7 +34,7 @@ const Hero = () => {
                         <p>0</p>
                     </div>
                     <div class="hamburger-container" >
-                        <Hamburger toggled={isOpen} toggle={setOpen} distance ="sm" size={18}/>
+                        <Hamburger toggled={isOpen} toggle={setOpen} distance ="sm" size={18} hideOutline={false}/>
                     </div>
                 </div>
             </div>

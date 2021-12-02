@@ -15,13 +15,17 @@ $section-padding:5rem;
     align-items: center;
 }
 .hero-header,.section-width{
-    max-width: 85%;
+    width: 85%;
     margin:0 auto;
 }
 
 @mixin hover-button{
-    background-color: #151c4b;
-    transition: 1000ms;
+    background-color:#212b77;
+    transition:1000ms background-color; 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hero-bg{
@@ -107,6 +111,10 @@ $section-padding:5rem;
         background: #0E122F;
         border-radius: 20px;
         border:none;
+        &:hover{
+            background-color:#212b77;
+            transition:1000ms background-color; 
+        }
         a{
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -217,7 +225,9 @@ $section-padding:5rem;
                 margin:0.5rem 0;
                 @include flex;
                 border: none;
-
+                &:hover{
+                    @include hover-button
+                }
                 a{
                     font-size: 0.6rem;
                     text-transform: capitalize;
@@ -291,6 +301,7 @@ $section-padding:5rem;
         }
         input{
             padding: 1rem 1rem;
+            border:2px solid red;
             display: inline-block;
             border:none;
             font-size: 0.7rem;
@@ -305,6 +316,9 @@ $section-padding:5rem;
             color: $secondary-text-color;
             text-transform:uppercase;
             border:none;
+            &:hover{
+                @include hover-button
+            }
         }
     }
 }
@@ -340,7 +354,7 @@ footer{
 
 @media only screen and (max-width:1280px){
     .hero-header,.section-width{
-        max-width: 90%;
+        width: 90%;
     }
     
     .hero-header{
@@ -440,10 +454,9 @@ footer{
     .community-section{
         padding:3rem 0;
         form{
-    
             label{
                 border:2px solid lightgray;
-                width: 75%;
+                width: 70%;
                 border-radius:10px;
             }
             input{
@@ -462,6 +475,9 @@ footer{
                 color: $secondary-text-color;
                 text-transform:uppercase;
                 border:none;
+                &:hover{
+                    @include hover-button
+                }
             }
         }
     }
@@ -770,6 +786,7 @@ footer{
     footer{
         .last-page{
             font-size: 0.7rem;
+
         }
         .logo{
             img{
@@ -781,8 +798,14 @@ footer{
 }
 
 @media only screen and (max-width:640px){
+    .hero-bg{
+        position: relative;
+    }
     .hero-header{
-        max-width: 100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        background-color: inherit;
         .hero-icon{
             font-size: 0.6rem;
             img{
@@ -797,7 +820,7 @@ footer{
             position: absolute;
             top: 3.5rem;
             width: 100%;
-            background: #797972;  //74746f
+            background: #0E122F;;  //74746f
             li{
                 width: 100%;
                 a{
@@ -836,8 +859,13 @@ footer{
         }
         
     }
+    .nav-color{
+       background:#0E122F;
+       transition: background 1000ms;
+    }
 
     .hero-content{
+        padding-top:3.5rem;
         padding-bottom: 15rem;
         h2{
             font-size: 0.9rem;
@@ -998,9 +1026,14 @@ footer{
     }
 
     .hero-content{
-        padding-bottom: 14rem;
+        justify-content: center;
+        padding:7rem 0 7rem 0;
         h2{
-            font-size: 0.7rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            .hide-mobile{
+                display: none;
+            }
         }
         button{
             a{
@@ -1116,7 +1149,7 @@ footer{
         }
     }
     footer{ 
-        
+        padding:1.5rem 0;
         .last-page{
             font-size: 0.6rem;
             flex-direction:column;
@@ -1131,6 +1164,7 @@ footer{
             }
             .media-icons-container{
                 order:2;
+                column-gap: 1.5rem;
                 .m-icon{
                     font-size:0.8rem;
                 }

@@ -2,7 +2,7 @@
 
 const StoreCollection = () =>{
     return (
-        <section className="store-section">
+        <section className="store-section"  id="product">
             <div className="section-width">
                 <div className="store-header">
                     <h2>Browse our store</h2>
