@@ -87,7 +87,7 @@ $section-padding:5rem;
                 margin-left: 0.5rem;
             }
         }
-        .hamburger{
+        .hamburger-container{
             display: none;
         }
     }
@@ -782,6 +782,7 @@ footer{
 
 @media only screen and (max-width:640px){
     .hero-header{
+        max-width: 100%;
         .hero-icon{
             font-size: 0.6rem;
             img{
@@ -793,6 +794,20 @@ footer{
         }
         .block{
             display: block;
+            position: absolute;
+            top: 3.5rem;
+            width: 100%;
+            background: #797972;  //74746f
+            li{
+                width: 100%;
+                a{
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 0.9rem;
+                    padding: 1.3rem 0;
+                }
+            }
         }
         .hidden{
             display: hidden;
@@ -815,7 +830,7 @@ footer{
                     font-size: 0.7rem;
                 }
             }
-            .hamburger{
+            .hamburger-container{
                 display: block;
             }
         }
